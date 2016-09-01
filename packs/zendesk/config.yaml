@@ -1,0 +1,6 @@
+---
+  email: "user@company.com"
+  password: "12345678"
+  subdomain: "company"
+  api_token: ""
+  oauth_token: ""

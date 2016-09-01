@@ -1,0 +1,11 @@
+---
+name: delete_ticket
+runner_type: run-python
+description: Delete a Zendesk ticket.
+enabled: true
+entry_point: delete_ticket.py
+parameters:
+  ticket_id:
+    type: string
+    description: ID of the ticket to delete.
+    required: true

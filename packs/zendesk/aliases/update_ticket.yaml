@@ -1,0 +1,11 @@
+---
+name: "zendesk_update_ticket"
+action_ref: "zendesk.update_ticket"
+description: "Update a Zendesk ticket"
+formats:
+    - "update zendesk ticket {{ ticket_id }} {{ comment }} "
+    - "zendesk update ticket {{ ticket_id }} {{ comment }} "
+ack:
+    format: "Connecting Zendesk server for updating a ticket"
+result:
+    format: "Zendesk ticket: {{ execution.result.result.id }} udpated" 

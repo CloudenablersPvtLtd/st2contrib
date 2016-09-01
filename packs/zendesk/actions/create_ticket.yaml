@@ -1,0 +1,31 @@
+---
+name: create_ticket
+runner_type: run-python
+description: Create a new Zendesk ticket.
+enabled: true
+entry_point: create_ticket.py
+parameters:
+  subject:
+    type: string
+    description: Subject of the ticket.
+    required: true
+  description:
+    type: string
+    description: "Ticket description. This will be the first comment on the ticket"
+    required: true
+  type:
+    type: string
+    description: "Ticket type. Typical tickets type include problem, incident, question or task."
+    required: true
+  requester_id:
+    type: string
+    description: ID of the user who requested this ticket.
+    required: false
+  priority:
+    type: string
+    description: "Ticket Priority. This defines the urgency with which the ticket should be addressed - urgent, high, normal, low."
+    required: false
+  extra_fields:
+    type: object
+    description: "Extra fields like submitter_id, assignee_id, tags, etc"
+    required: false

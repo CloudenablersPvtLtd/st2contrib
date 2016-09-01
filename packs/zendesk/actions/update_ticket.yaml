@@ -1,0 +1,36 @@
+---
+name: update_ticket
+runner_type: run-python
+description: Update Zendesk ticket.
+enabled: true
+entry_point: update_ticket.py
+parameters:
+  ticket_id:
+    type: string
+    description: ID of the ticket.
+    required: true
+  comment:
+    type: string
+    description: comment to update
+    required: false
+  comment_publicly:
+    type: string
+    description: True or False. If True, the ticket requester can see the comment. If False, only internal agents can see it
+    default: 'True'
+    required: false
+  assignee_id:
+    type: string
+    description: ID of the assignee to update
+    required: false
+  status:
+    type: string
+    description: Status of the ticket to update - new, open, pending, hold, solved, closed
+    required: false
+  type:
+    type: string
+    description: "Ticket type to update. Typical tickets type include problem, incident, question or task."
+    required: false
+  extra_fields:
+    type: object
+    description: "Extra fields like submitter_id, assignee_id, tags, etc"
+    required: false

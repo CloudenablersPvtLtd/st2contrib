@@ -1,0 +1,11 @@
+---
+name: "zendesk_delete_ticket"
+action_ref: "zendesk.delete_ticket"
+description: "Delete a Zendesk ticket"
+formats:
+    - "delete zendesk ticket {{ticket_id}}"
+    - "zendesk delete ticket {{ticket_id}}"
+ack:
+    format: "Connecting Zendesk server for deleting a ticket"
+result:
+    format: "Zendesk ticket deleted." 

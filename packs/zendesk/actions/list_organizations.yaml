@@ -1,0 +1,6 @@
+---
+name: list_organizations
+runner_type: run-python
+description: Retrieve all Zendesk organizations.
+enabled: true
+entry_point: list_organizations.py

@@ -1,0 +1,11 @@
+---
+name: get_ticket
+runner_type: run-python
+description: Retrieve information about a particular Zendesk ticket.
+enabled: true
+entry_point: get_ticket.py
+parameters:
+  ticket_id:
+    type: string
+    description: ID of the ticket
+    required: true

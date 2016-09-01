@@ -1,0 +1,11 @@
+---
+name: "zendesk_create_ticket"
+action_ref: "zendesk.create_ticket"
+description: "Create a Zendesk ticket"
+formats:
+    - "create zendesk ticket {{ subject }} {{ description=' ' }} {{ type }}"
+    - "zendesk create ticket {{ subject }} {{ description=' ' }} {{ type }}"
+ack:
+    format: "Connecting Zendesk server for ticket creation"
+result:
+    format: "Zendesk ticket: {{ execution.result.result.id }} created" 

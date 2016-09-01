@@ -1,0 +1,43 @@
+---
+name: search_ticket
+runner_type: run-python
+description: Search a Zendesk ticket.
+enabled: true
+entry_point: search_ticket.py
+parameters:
+  ticket_id:
+    type: string
+    description: ID of the user who requested this ticket.
+    required: false
+  requester_id:
+    type: string
+    description: ID of the user who requested this ticket.
+    required: false
+  subject:
+    type: string
+    description: Subject of the ticket.
+    required: false
+  description:
+    type: string
+    description: "Ticket description. This will be the first comment on the ticket."
+    required: false
+  ticket_type:
+    type: string
+    description: "Ticket type. Typical tickets type include problem, incident, question or task."
+    required: false
+  priority:
+    type: string
+    description: "Ticket Priority. This defines the urgency with which the ticket should be addressed - urgent, high, normal, low."
+    required: false
+  assignee_id:
+    type: string
+    description: ID of the assignee to which the ticket is assigned
+    required: false
+  status:
+    type: string
+    description: Status of the ticket - new, open, pending, hold, solved, closed
+    required: false
+  extra_search_fields:
+    type: object
+    description: "Extra fields like submitter_id, tags, etc"
+    required: false

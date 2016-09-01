@@ -1,0 +1,6 @@
+---
+name: list_tickets
+runner_type: run-python
+description: Retrieve all Zendesk tickets.
+enabled: true
+entry_point: list_tickets.py
