@@ -9,4 +9,6 @@ ack:
     enabled: true
     format: "Retrieving Zendesk ticket information"
 result:
-    format: "Zendesk ticket details {~} {{ execution.result.result }}" 
+    format: |
+        Zendesk ticket details {~}
+        Id: {{ execution.result.result.id }},  Subject: {{ execution.result.result.subject }}, Priority: {{ execution.result.result.priority }}, Type: {{ execution.result.result.type }}, Status: {{ execution.result.result.status }}

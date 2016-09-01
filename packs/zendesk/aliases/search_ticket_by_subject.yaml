@@ -8,4 +8,8 @@ formats:
 ack:
     format: "Connecting Zendesk server for ticket search"
 result:
-    format: "Zendesk ticket search details {~} {{ execution.result.result }}" 
+    format: |
+        Zendesk ticket search details {~}
+        {% for item in execution.result.result.tickets -%}
+            - Id: {{ item.id }},  Subject: {{ item.subject }}, Priority: {{ item.priority }}, Type: {{ item.type }}, Status: {{ item.status }}
+        {%+ endfor %}
