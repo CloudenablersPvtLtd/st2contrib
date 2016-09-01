@@ -1,0 +1,11 @@
+---
+name: "search_ticket_by_description"
+action_ref: "zendesk.search_ticket"
+description: "Search a Zendesk ticket by description"
+formats:
+    - "search_by_description zendesk ticket {{ description }} "
+    - "zendesk search_by_description ticket {{ description }} "
+ack:
+    format: "Connecting Zendesk server for ticket search"
+result:
+    format: "Zendesk ticket search details {~} {{ execution.result.result }}"

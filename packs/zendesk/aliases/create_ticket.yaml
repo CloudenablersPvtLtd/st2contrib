@@ -1,5 +1,5 @@
 ---
-name: "zendesk_create_ticket"
+name: "create_ticket"
 action_ref: "zendesk.create_ticket"
 description: "Create a Zendesk ticket"
 formats:

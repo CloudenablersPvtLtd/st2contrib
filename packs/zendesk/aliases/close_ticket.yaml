@@ -1,0 +1,11 @@
+---
+name: "close_ticket"
+action_ref: "zendesk.update_ticket"
+description: "Close a Zendesk ticket"
+formats:
+    - "close zendesk ticket {{ ticket_id }} {{ status='closed' }} "
+    - "zendesk close ticket {{ ticket_id }} {{ status='closed' }} "
+ack:
+    format: "Connecting Zendesk server for closing a ticket"
+result:
+    format: "Zendesk ticket: {{ execution.result.result.id }} Closed" 

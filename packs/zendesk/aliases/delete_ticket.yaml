@@ -1,5 +1,5 @@
 ---
-name: "zendesk_delete_ticket"
+name: "delete_ticket"
 action_ref: "zendesk.delete_ticket"
 description: "Delete a Zendesk ticket"
 formats:

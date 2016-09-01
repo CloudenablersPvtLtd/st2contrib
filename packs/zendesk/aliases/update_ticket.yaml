@@ -1,5 +1,5 @@
 ---
-name: "zendesk_update_ticket"
+name: "update_ticket"
 action_ref: "zendesk.update_ticket"
 description: "Update a Zendesk ticket"
 formats:

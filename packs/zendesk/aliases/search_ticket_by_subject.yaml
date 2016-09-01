@@ -1,10 +1,10 @@
 ---
-name: "zendesk_search_ticket"
+name: "search_ticket_by_subject"
 action_ref: "zendesk.search_ticket"
 description: "Search a Zendesk ticket"
 formats:
-    - "search zendesk ticket {{ subject }} "
-    - "zendesk search ticket {{ subject }} "
+    - "search_by_subject zendesk ticket {{ subject }} "
+    - "zendesk search_by_subject ticket {{ subject }} "
 ack:
     format: "Connecting Zendesk server for ticket search"
 result:
