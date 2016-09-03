@@ -33,7 +33,7 @@ to query your StackStorm installation for things such as available actions,
 sensors and more.
 
 * ``!zendesk get ticket <ticket_id>`` - Retrieves details for a particular ticket.
-* ``!zendesk create ticket <subject> <description> <type>`` - Creates a new ticket.
+* ``!zendesk create ticket <subject> <description> <ticket_type>`` - Creates a new ticket.
 * ``!zendesk update ticket <ticket_id> <comment>`` - Updates a ticket.
 * ``!zendesk search_by_subject ticket <subject>`` - Search and retrieves tickets by subject.
 * ``!zendesk search_by_status ticket <status>`` - Search and retrieves tickets by status.
@@ -41,7 +41,7 @@ sensors and more.
 * ``!zendesk close ticket <ticket_id>`` - Closes a ticket.
 * ``!delete zendesk ticket <ticket_id>`` - Deletes a ticket.
 * ``!get zendesk ticket <ticket_id>`` - Retrieves details for a particular ticket.
-* ``!create zendesk ticket <subject> <description> <type>`` - Creates a new ticket.
+* ``!create zendesk ticket <subject> <description> <ticket_type>`` - Creates a new ticket.
 * ``!update zendesk ticket <ticket_id> <comment>`` - Updates a ticket.
 * ``!search_by_subject zendesk ticket <subject>`` - Search and retrieves tickets by subject.
 * ``!search_by_status zendesk ticket <status>`` - Search and retrieves tickets by status.

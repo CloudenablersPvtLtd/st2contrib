@@ -9,13 +9,13 @@ __all__ = [
 
 
 class CreateZendeskTicket(BaseZendeskAction):
-    def run(self, subject, description, type, priority=None, requester_id=None,
-            extra_fields=None):
+    def run(self, subject, description, ticket_type, priority=None,
+            requester_id=None, extra_fields=None):
         ticket_obj = api_objects.Ticket(subject=subject,
                                         description=description,
-                                        type=type)
+                                        type=ticket_type)
         if not extra_fields:
-                extra_fields = dict()
+            extra_fields = dict()
 
         if priority:
             extra_fields['priority'] = priority

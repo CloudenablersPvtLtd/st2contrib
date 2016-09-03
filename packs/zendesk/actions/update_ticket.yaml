@@ -26,7 +26,7 @@ parameters:
     type: string
     description: Status of the ticket to update - new, open, pending, hold, solved, closed
     required: false
-  type:
+  ticket_type:
     type: string
     description: "Ticket type to update. Typical tickets type include problem, incident, question or task."
     required: false

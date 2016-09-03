@@ -8,15 +8,15 @@ __all__ = [
 
 class SearchZendeskTicket(BaseZendeskAction):
     def run(self, ticket_id=None, requester_id=None, subject=None,
-            description=None, ticket_type=None, priority=None, assignee_id=None,
-            status=None, extra_search_fields=None):
+            description=None, ticket_type=None, priority=None,
+            assignee_id=None, status=None, extra_search_fields=None):
 
         search_query = dict()
         result = dict()
         params = dict(ticket_id=ticket_id, requester_id=requester_id,
-                              subject=subject, description=description,
-                              ticket_type=ticket_type, priority=priority,
-                              assignee_id=assignee_id, status=status)
+                      subject=subject, description=description,
+                      type=ticket_type, priority=priority,
+                      assignee_id=assignee_id, status=status)
         if extra_search_fields:
             params.update(extra_search_fields)
 

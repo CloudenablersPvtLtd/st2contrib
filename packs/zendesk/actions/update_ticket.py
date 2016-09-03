@@ -11,7 +11,8 @@ __all__ = [
 
 class UpdateZendeskTicket(BaseZendeskAction):
     def run(self, ticket_id, comment=None, comment_publicly=None,
-            assignee_id=None, status=None, type=None, extra_fields=None):
+            assignee_id=None, status=None, ticket_type=None,
+            extra_fields=None):
 
         ticket_obj = api_objects.Ticket(id=ticket_id)
 
@@ -24,8 +25,8 @@ class UpdateZendeskTicket(BaseZendeskAction):
         if status:
             extra_fields['status'] = status
 
-        if type:
-            extra_fields['type'] = type
+        if ticket_type:
+            extra_fields['type'] = ticket_type
 
         ticket_obj = append_extra_fields(ticket_obj, extra_fields)
 
@@ -34,7 +35,7 @@ class UpdateZendeskTicket(BaseZendeskAction):
                 comment_visibilty = False
             else:
                 comment_visibilty = True
-            ticket_obj.comment = api_objects.Comment(body=comment, 
+            ticket_obj.comment = api_objects.Comment(body=comment,
                                                      public=comment_visibilty)
 
         update_ticket = self._client.tickets.update(ticket_obj)

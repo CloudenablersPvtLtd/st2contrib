@@ -15,9 +15,8 @@ class DeleteZendeskTicket(BaseZendeskAction):
 
         response = self._client.tickets.delete(ticket_obj)
         if response.status_code == HTTP_CODES.SUCCESS or \
-                        response.status_code == HTTP_CODES.NO_CONTENT:
+                response.status_code == HTTP_CODES.NO_CONTENT:
             result['status'] = RESPONSE_MESSAGES.SUCCESS
             result['message'] = 'Ticket %s' % RESPONSE_MESSAGES.DELETE_SUCCESS
             result['id'] = ticket_id
         return result
-

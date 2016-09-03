@@ -18,6 +18,7 @@ class ListZendeskTickets(BaseZendeskAction):
         for ticket in all_tickets:
             ticket_obj = api_objects.Ticket()
             ticket_obj = append_extra_fields(ticket_obj, ticket)
-            result['tickets'].append(get_ticket_result(self._client, ticket_obj))
+            result['tickets'].append(
+                get_ticket_result(self._client, ticket_obj))
 
         return result

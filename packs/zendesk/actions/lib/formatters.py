@@ -8,8 +8,8 @@ __all__ = [
 ]
 
 
-def to_dict(object):
-    return object.__dict__
+def to_dict(object_to_convert):
+    return object_to_convert.__dict__
 
 
 def to_object(dictionary):
@@ -60,22 +60,18 @@ def get_ticket_result(client, ticket):
 
 
 def get_userid(client, username, email):
+    """ user is unique by username and email """
     search_result = client.search(type='user', name=username, email=email)
     user_id = int()
-    '''
-    user is unique by username and email
-    '''
     for user in search_result:
         user_id = user.id
     return user_id
 
 
 def get_organizationid(client, organization_name):
-    search_result = client.search(type='user', name=organization_name)
+    """ organization name is unique """
+    search_result = client.search(type='organization', name=organization_name)
     organization_id = int()
-    '''
-    organization name is unique'
-    '''
     for organization in search_result:
         organization_id = organization.id
     return organization_id

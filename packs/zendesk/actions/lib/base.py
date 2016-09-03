@@ -21,8 +21,8 @@ class BaseZendeskAction(Action):
     def _get_client(self):
         config = self.config
 
-        if not config['password'] and not config[
-            'api_token'] and not config['oauth_token']:
+        if not config['password'] and not config['api_token'] and \
+                not config['oauth_token']:
             raise Exception(
                 'Password or API Token or OAuth Token should be provided')
 
